@@ -1,9 +1,3 @@
-ofxQCPlugin
-===========
-
-ofxQCPlugin is an add on for Quartz Composer and Open Frameworks allowing developers to leverage the Open Frameworks media &amp; programming environment to create new Quartz Composer plugins. ofxQCPlugin allows interoperability with the Quartz Composer 'run time' and the Open Framework environment, including image passing between both environments.  The eventual goal is to be able to simply move your existing Open Frameworks ofBaseApp and with a simple re-compile have a functioning Quartz Composer plugin. A bit more work can allow you to pass Images, colors, structures (arrays and key value pairs), and numbers between the Quartz Composer environment and your Open Framework based code.  You can use ofxQCPlugin to:  Post process your Open Framework rendering using the plethora of existing image processing filters in Quartz Composer.  Leverage Open Frameworks native drawing, text, and visualization tools inside of Quartz Composer to make visualizations that would be difficult using a node based paradigm on its own.  Create unique, custom, image processing effects for Quartz Composer powered VJ applications, like VDMX, Coge and Arkaos Grand VJ using Open Frameworks.  Extend Quartz Composers capability by leveraging all of the add-ons currently available to Open Frameworks, and use them side by side with Quartz Composers standard tools.
-
-
 ofxQCPlugin Readme
 
 ***
@@ -16,9 +10,9 @@ Installation
 
 The latest beta of ofxQCPlugin now resides in your OpenFrameworks Addons folder, and the example plugins below reside in your Apps folder, just like any good Open Frameworks citizen should.
 
-Copy "ofxQCplugin" to your "openFrameworks/addons" folder
+Copy "ofxQCplugin" to your "of_preRelease_v0061_osxSL_FAT/addons" folder
 
-Copy "QC Plugins" to your "openFrameworks/apps" folder
+Copy "QC Plugins" to your "of_preRelease_v0061_osxSL_FAT/apps" folder
 
 If you wish to make a new QC plugin, you probably want to duplicate one of the existing ones. 
 

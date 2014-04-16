@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>66F08436-D865-4EF6-913E-2D05B5E2A972</string>
+	<key>IDESourceControlProjectName</key>
+	<string>_QCtoOFImageDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>530A2986-BEF7-4EB9-B37B-11E929CE90E2</key>
+		<string>https://github.com/vade/openFrameworks.git</string>
+		<key>7A2B5658-F20F-42BF-AE42-D497B4F27B9E</key>
+		<string>https://github.com/vade/ofxQCPlugin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>addons/ofxQCPlugin/example-QCtoOFImageDemo/_QCtoOFImageDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>530A2986-BEF7-4EB9-B37B-11E929CE90E2</key>
+		<string>../../../../..</string>
+		<key>7A2B5658-F20F-42BF-AE42-D497B4F27B9E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/vade/ofxQCPlugin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>530A2986-BEF7-4EB9-B37B-11E929CE90E2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A2B5658-F20F-42BF-AE42-D497B4F27B9E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxQCPlugin</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>530A2986-BEF7-4EB9-B37B-11E929CE90E2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>openFrameworks</string>
+		</dict>
+	</array>
+</dict>
+</plist>

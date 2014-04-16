@@ -16,12 +16,9 @@
 // NOW ITS SAFE TO IMPORT GLEE SINCE OFMAIN HAS IT.
 // YES I AM YELLING
 
-#import "testApp.h"
+#import "ofApp.h"
 
 #import <Quartz/Quartz.h>
-
-// this is our Open Frameworks ofBaseApp implementation.
-class qctoOFImageTestApp;
 
 // our plugin is a subclass of our ofxQCPluginSuperClass
 // which implements specific functionality we want.

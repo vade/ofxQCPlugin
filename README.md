@@ -32,7 +32,7 @@ Important : 32 bit only
 QC plugins like to be 32/64 universal, but for now, due to Quicktime dependencies, Open Frameworks based plugins are by default 32 bit only. If you want to stub out the Quicktime Codebase within your OF install, feel free to do so, you should be able to get 64 bit compliance with a little bit of work.
 
 
-Important : Name Space Collisions:
+Important : Name Space Collisions
 ===========
 
 Since Quartz Composer plugins use ObjectiveC++ to load the Open Frameworks ofApp (usually your 'ofApp'), and more than one Open Frameworks powered Quartz Composer plugin may be loaded at a single time in a host app, we need to pay attention to name space collisions.
@@ -48,6 +48,6 @@ Example Plugins:
 
 * OFtoQCImage: loads an image within Open Frameworks and outputs it to the Quartz Composer world. 
 	
-* QCtoOFImage: The opposite of above, sends any image from Quart Composer into Open Frameworks.
+* QCtoOFImage: The opposite of above, sends any image from Quartz Composer into Open Frameworks.
 	
 * SoundPlayerFFT: A port of the Sound Player FFT example with mp3 loading, playback, working interactive mouse and FFT analysis and visualization.

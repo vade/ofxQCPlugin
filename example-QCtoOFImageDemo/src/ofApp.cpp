@@ -1,8 +1,9 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
 void qctoOFImageTestApp::setup()
-{	
+{
+	testOfImage.setUseTexture(true);
 	testOfImage.loadImage("tdf_1972_poster.jpg");
 }
 
@@ -21,14 +22,16 @@ void qctoOFImageTestApp::draw()
 	ofEnableAlphaBlending();
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 	
-	if(testOfTexture != NULL)
-		testOfTexture->draw(9,9);
-	
 	// we have to delete our texture each frame since QC gives us a new one,
 	// it expects us to release it.
-	delete testOfTexture;
-	testOfTexture = NULL;
-	
+	if(testOfTexture != NULL)
+	{
+		testOfTexture->draw(9,9);
+
+		delete testOfTexture;
+		testOfTexture = NULL;
+	}
+
 	ofSetColor(255, 0, 0);
 	ofCircle(mouseX, mouseY, 20);
 
@@ -66,6 +69,15 @@ void qctoOFImageTestApp::mouseReleased(int x, int y, int button){
 
 //--------------------------------------------------------------
 void qctoOFImageTestApp::windowResized(int w, int h){
+	
+}
+//--------------------------------------------------------------
+void qctoOFImageTestApp::gotMessage(ofMessage msg){
+	
+}
+
+//--------------------------------------------------------------
+void qctoOFImageTestApp::dragEvent(ofDragInfo dragInfo){
 	
 }
 

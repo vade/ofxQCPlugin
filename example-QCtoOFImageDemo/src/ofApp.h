@@ -1,5 +1,4 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
 
@@ -17,13 +16,14 @@ class qctoOFImageTestApp : public ofBaseApp
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
-		
+		void dragEvent(ofDragInfo dragInfo);
+		void gotMessage(ofMessage msg);
+
 		// test input texture, this comes from Quartz Composer
-		ofTexture* testOfTexture;
+		// set to NULL here so we can test it. Fuck
+		ofTexture* testOfTexture = NULL;
 
 		// test loading and drawing images ourself withing OF.
 		ofImage testOfImage;
 
 };
-
-#endif

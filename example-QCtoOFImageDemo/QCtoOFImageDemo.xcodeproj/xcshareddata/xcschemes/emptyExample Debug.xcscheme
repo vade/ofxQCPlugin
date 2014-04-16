@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
                BuildableName = "OFtoQCImageDemo.plugin"
-               BlueprintName = "OFtoQCImageDemo"
-               ReferencedContainer = "container:OFtoQCImageDemo.xcodeproj">
+               BlueprintName = "QCtoOFImageDemo"
+               ReferencedContainer = "container:QCtoOFImageDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "OFtoQCImageDemo.plugin"
-            BlueprintName = "OFtoQCImageDemo"
-            ReferencedContainer = "container:OFtoQCImageDemo.xcodeproj">
+            BlueprintName = "QCtoOFImageDemo"
+            ReferencedContainer = "container:QCtoOFImageDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -56,8 +56,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "OFtoQCImageDemo.plugin"
-            BlueprintName = "OFtoQCImageDemo"
-            ReferencedContainer = "container:OFtoQCImageDemo.xcodeproj">
+            BlueprintName = "QCtoOFImageDemo"
+            ReferencedContainer = "container:QCtoOFImageDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -74,8 +74,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "OFtoQCImageDemo.plugin"
-            BlueprintName = "OFtoQCImageDemo"
-            ReferencedContainer = "container:OFtoQCImageDemo.xcodeproj">
+            BlueprintName = "QCtoOFImageDemo"
+            ReferencedContainer = "container:QCtoOFImageDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

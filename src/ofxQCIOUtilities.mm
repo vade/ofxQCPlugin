@@ -9,6 +9,7 @@
 
 // eventually use CGLMacro.h yo
 #import "ofxQCIOUtilities.h"
+#include <OpenGL/glext.h>
 
 //GLuint copyofTextureToRectTexture(id<QCPlugInContext> qcContext, ofTexture* texture)
 // need to handle flipped ? hrm.
@@ -106,7 +107,8 @@ GLuint copyTextureToRectTexture(id<QCPlugInContext> qcContext, GLuint textureNam
 	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, previousDrawFBO);
 	
 	// Should be glFlushRenderApple();
-	glFlush();
+//	glFlush();
+//	glFlushRenderApple();
 	
 	// delete our FBO so we dont leak.
 	glDeleteFramebuffers(1, &someFBO);
@@ -137,6 +139,7 @@ ofTexture* ofTextureFromQCImage(id<QCPlugInContext> qcContext, id<QCPlugInInputI
 
 		// set the texture data params manually cause we are awesome like that.
 		//newOfTexture->texData.textureName[0] = newTextureID;
+		newOfTexture->texData.bUseExternalTextureID = true;
 		newOfTexture->texData.textureID = newTextureID;
 		newOfTexture->texData.textureTarget = GL_TEXTURE_RECTANGLE_ARB;
 		newOfTexture->texData.width = [qcImage imageBounds].size.width;

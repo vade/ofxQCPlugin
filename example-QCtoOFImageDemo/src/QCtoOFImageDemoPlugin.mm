@@ -137,7 +137,7 @@ static void MyQCPlugInTextureReleaseCallback (CGLContextObj cgl_ctx, GLuint name
 	
 	NSString* dataPath = [NSString stringWithFormat:@"%@/Contents/Resources/Data/", [[NSBundle bundleForClass:[self class]] bundlePath]];
 	
-	ofSetDataPathRoot([dataPath cString]);
+	ofSetDataPathRoot([dataPath cStringUsingEncoding:NSASCIIStringEncoding]);
 	
 	// we have to manually run setup()
 	ofGetAppPtr()->setup();
@@ -149,7 +149,6 @@ static void MyQCPlugInTextureReleaseCallback (CGLContextObj cgl_ctx, GLuint name
 
 - (BOOL) execute:(id<QCPlugInContext>)context atTime:(NSTimeInterval)time withArguments:(NSDictionary*)arguments
 {		
-	
 	CGLContextObj cgl_ctx = [context CGLContextObj];
 	CGLSetCurrentContext(cgl_ctx);
 	CGLLockContext(cgl_ctx);
@@ -178,7 +177,11 @@ static void MyQCPlugInTextureReleaseCallback (CGLContextObj cgl_ctx, GLuint name
 	
 	// set any variables into OF before you run super. 
 	// this uses our ofTextureFromQCImage, see ofxQCImageUtilities for details.
-	pluginTestApp->testOfTexture = ofTextureFromQCImage(context, self.inputImage);	
+	if([self didValueForInputKeyChange:@"inputImage"])
+	{
+		if(self.inputImage != nil)
+			pluginTestApp->testOfTexture = ofTextureFromQCImage(context, self.inputImage);
+	}
 	
 	// do our actual per frame drawing here
 	// we use the windowProxy to handle coordinate space conversions for us

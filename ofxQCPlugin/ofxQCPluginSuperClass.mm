@@ -6,13 +6,15 @@
 //  Copyright (c) 2009 __MyCompanyName__. All rights reserved.
 //
 
-/* It's highly recommended to use CGL macros instead of changing the current context for plug-ins that perform OpenGL rendering */
-#import <OpenGL/CGLMacro.h>
-
 #import "ofxQCPluginSuperClass.h"
 
 #define	kQCPlugIn_Name				@"QC To OF Image Demo"
 #define	kQCPlugIn_Description		@"Open Frameworks running within Quartz Composer Demo"
+
+/* It's highly recommended to use CGL macros instead of changing the current context for plug-ins that perform OpenGL rendering */
+#import <OpenGL/CGLMacro.h>
+
+
 
 @implementation ofxQCPluginSuperClass
 
@@ -130,7 +132,7 @@
 	
 	NSString* dataPath = [NSString stringWithFormat:@"%@/Contents/Resources/Data/", [[NSBundle bundleForClass:[self class]] bundlePath]];
 	
-	ofSetDataPathRoot([dataPath cString]);
+	ofSetDataPathRoot([dataPath cStringUsingEncoding:NSASCIIStringEncoding]);
 	
 	// we have to manually run setup()
 	ofGetAppPtr()->setup();

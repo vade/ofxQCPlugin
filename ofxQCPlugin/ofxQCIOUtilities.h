@@ -8,10 +8,8 @@
  */
 
 #import "ofImage.h"
-#import "ofTexture.h"
 
 #import	<Quartz/Quartz.h>
-#import <OpenGL/OpenGL.h>
 
 // ofxQCImageUtilities is a set of utility functions allowing you to
 // exchange image IO between Open Frameworks and Quartz Composer images.

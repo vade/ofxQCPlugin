@@ -32,7 +32,7 @@ ofxQCBaseWindowProxy::ofxQCBaseWindowProxy()
 #pragma mark Initialization methods
 
 void ofxQCBaseWindowProxy::setupOpenGL(int w, int h, int screenMode)
-{	
+{
 	ofSetupGraphicDefaults();
 
 	windowMode = screenMode;

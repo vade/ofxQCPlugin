@@ -8,7 +8,6 @@
  */
 
 // eventually use CGLMacro.h yo
-
 #import "ofxQCIOUtilities.h"
 
 //GLuint copyofTextureToRectTexture(id<QCPlugInContext> qcContext, ofTexture* texture)
@@ -21,21 +20,21 @@ GLuint copyTextureToRectTexture(id<QCPlugInContext> qcContext, GLuint textureNam
 	// cache FBO state
 	GLint previousFBO, previousReadFBO, previousDrawFBO;
 	
-	glGetIntegerv(GL_FRAMEBUFFER_BINDING_EXT, &previousFBO);
-	glGetIntegerv(GL_READ_FRAMEBUFFER_BINDING_EXT, &previousReadFBO);
-	glGetIntegerv(GL_DRAW_FRAMEBUFFER_BINDING_EXT, &previousDrawFBO);
+	glGetIntegerv(GL_FRAMEBUFFER_BINDING, &previousFBO);
+	glGetIntegerv(GL_READ_FRAMEBUFFER_BINDING, &previousReadFBO);
+	glGetIntegerv(GL_DRAW_FRAMEBUFFER_BINDING, &previousDrawFBO);
 	
 	// new texture
-	GLuint newTex;
+	GLuint newTex = 0;
 	glGenTextures(1, &newTex);
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, newTex);
 	glTexImage2D(GL_TEXTURE_RECTANGLE_ARB, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
 	
 	// make new FBO and attach.
-	GLuint fboID;
-	glGenFramebuffersEXT(1, &fboID);
-	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, fboID);
-	glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT, GL_TEXTURE_RECTANGLE_ARB, newTex, 0);
+	GLuint someFBO = 0;
+	glGenFramebuffers(1, &someFBO);
+	glBindFramebuffer(GL_FRAMEBUFFER, someFBO);
+	glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_RECTANGLE_ARB, newTex, 0);
 	
 	// draw ofTexture into new texture;
 	glPushAttrib(GL_ALL_ATTRIB_BITS);
@@ -102,14 +101,15 @@ GLuint copyTextureToRectTexture(id<QCPlugInContext> qcContext, GLuint textureNam
 	glPopAttrib();
 	
 	// pop back to old FBO
-	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, previousFBO);	
-	glBindFramebufferEXT(GL_READ_FRAMEBUFFER_EXT, previousReadFBO);
-	glBindFramebufferEXT(GL_DRAW_FRAMEBUFFER_EXT, previousDrawFBO);
+	glBindFramebuffer(GL_FRAMEBUFFER, previousFBO);
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, previousReadFBO);
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, previousDrawFBO);
 	
-	glFlushRenderAPPLE();
+	// Should be glFlushRenderApple();
+	glFlush();
 	
 	// delete our FBO so we dont leak.
-	glDeleteFramebuffersEXT(1, &fboID);
+	glDeleteFramebuffers(1, &someFBO);
 	
 	CGLUnlockContext([qcContext CGLContextObj]);
 	
@@ -147,7 +147,9 @@ ofTexture* ofTextureFromQCImage(id<QCPlugInContext> qcContext, id<QCPlugInInputI
 		newOfTexture->texData.tex_t = [qcImage imageBounds].size.width;
 		newOfTexture->texData.tex_u = [qcImage imageBounds].size.height;
 		newOfTexture->texData.glTypeInternal = GL_RGBA; // TODO:  ? is this correct?
-		newOfTexture->texData.glType = GL_RGBA;
+		
+		// removed in 0.8 ? // vade
+		//newOfTexture->texData.glType = GL_RGBA;
 		newOfTexture->texData.bAllocated = true;
 		
 		[qcImage unbindTextureRepresentationFromCGLContext:[qcContext CGLContextObj] textureUnit:GL_TEXTURE0];
@@ -208,9 +210,7 @@ id <QCPlugInOutputImageProvider> qcImageFromOfImage(id<QCPlugInContext> qcContex
 	if(image.getTextureReference().getTextureData().bAllocated == true)
 	{		
 		ofTextureData data = image.getTextureReference().getTextureData(); 
-				
-		CGLSetCurrentContext([qcContext CGLContextObj]);
-		
+						
 		outputProvider = [qcContext outputImageProviderFromTextureWithPixelFormat:QCPlugInPixelFormatARGB8
 																	   pixelsWide:image.getWidth() 
 																	   pixelsHigh:image.getHeight()

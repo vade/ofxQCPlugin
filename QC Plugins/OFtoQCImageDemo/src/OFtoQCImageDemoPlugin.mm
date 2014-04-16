@@ -130,14 +130,14 @@ static void MyQCPlugInTextureReleaseCallback (CGLContextObj cgl_ctx, GLuint name
 	
 	ofSetupOpenGL(windowProxy, 1024, 768, OF_WINDOW); 
 	
-	pluginTestApp = new ofToQCImageTestApp();
+	pluginTestApp = new ofApp();
 
 	// run our ofBaseApp.
 	ofRunApp(pluginTestApp);
 	
 	NSString* dataPath = [NSString stringWithFormat:@"%@/Contents/Resources/Data/", [[NSBundle bundleForClass:[self class]] bundlePath]];
 	
-	ofSetDataPathRoot([dataPath cString]);
+	ofSetDataPathRoot([dataPath cStringUsingEncoding:NSASCIIStringEncoding]);
 	
 	// we have to manually run setup()
 	ofGetAppPtr()->setup();

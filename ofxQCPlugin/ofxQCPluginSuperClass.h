@@ -25,7 +25,7 @@
 }
 // we will set this in our subclass of ofxQCPluginSuperClass
 // ie, our new Open Frameworks based QC plugin
-@property (assign) id ofBaseAppPointerValue;B
+@property (assign) id ofBaseAppPointerValue;
 
 // basic inputs for the Open Framework environment are set here.
 @property (assign) double inputMousePositionX;

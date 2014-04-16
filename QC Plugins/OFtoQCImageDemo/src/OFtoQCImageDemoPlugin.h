@@ -16,7 +16,7 @@
 // NOW ITS SAFE TO IMPORT GLEE SINCE OFMAIN HAS IT.
 // YES I AM YELLING
 
-#import "testApp.h"
+#import "ofApp.h"
 
 #import <Quartz/Quartz.h>
 
@@ -30,7 +30,7 @@
 	ofxQCBaseWindowProxy* windowProxy;
 
 	// an instance of our ofBaseApp for our plugin
-	ofToQCImageTestApp* pluginTestApp;
+	ofApp* pluginTestApp;
 }
 
 // we need these!

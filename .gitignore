@@ -1,3 +1,9 @@
 QC Plugins/OFtoQCImageDemo/OFtoQCImageDemo.xcodeproj
 QC Plugins/QCtoOFImageDemo/QCtoOFImageDemo.xcodeproj
 QC Plugins/SoundPlayerFFTExample/SoundPlayerExample.xcodeproj
+example-OFVBOExample/OFtoQCImageDemo.xcodeproj/project.xcworkspace
+example-OFVBOExample/OFtoQCImageDemo.xcodeproj/xcshareddata
+example-OFVBOExample/OFtoQCImageDemo.xcodeproj/xcuserdata
+example-OFtoQCImageDemo/OFtoQCImageDemo.xcodeproj/project.xcworkspace
+example-SoundPlayerFFTExample/SoundPlayerExample.xcodeproj/project.xcworkspace
+example-SoundPlayerFFTExample/SoundPlayerExample.xcodeproj/xcuserdata

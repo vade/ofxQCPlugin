@@ -30,7 +30,7 @@
 	ofxQCBaseWindowProxy* windowProxy;
 
 	// an instance of our ofBaseApp for our plugin
-	ofToQCImageDemoApp* pluginTestApp;
+	ofApp* pluginTestApp;
 }
 
 // we need these!

@@ -130,7 +130,7 @@ static void MyQCPlugInTextureReleaseCallback (CGLContextObj cgl_ctx, GLuint name
 	
 	ofSetupOpenGL(windowProxy, 1024, 768, OF_WINDOW); 
 	
-	pluginTestApp = new ofToQCImageDemoApp();
+	pluginTestApp = new ofApp();
 
 	// run our ofBaseApp.
 	ofRunApp(pluginTestApp);

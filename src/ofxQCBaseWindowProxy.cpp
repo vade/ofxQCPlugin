@@ -76,9 +76,7 @@ void ofxQCBaseWindowProxy::draw()
 	glLoadIdentity();
 
 	// set up coordinate system based on our proxy window.
-	glOrtho(0.0, windowSize.x, windowSize.y, 0.0, -1.0, 1.0);
-		
-	
+	glOrtho(0.0, windowSize.x, windowSize.y, 0.0, -1.0, 1.0);	
 	
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();

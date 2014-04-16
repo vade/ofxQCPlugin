@@ -1,7 +1,7 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::setup(){
+void ofApp::setup(){
 	
 	// force the use of a texture to make sure our
 	// image has an internal texture representation
@@ -12,56 +12,56 @@ void ofToQCImageDemoApp::setup(){
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::update(){
+void ofApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::draw(){
+void ofApp::draw(){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::keyReleased(int key){
+void ofApp::keyReleased(int key){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::mouseMoved(int x, int y){
+void ofApp::mouseMoved(int x, int y){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::mousePressed(int x, int y, int button){
+void ofApp::mousePressed(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::gotMessage(ofMessage msg){
+void ofApp::gotMessage(ofMessage msg){
 
 }
 
 //--------------------------------------------------------------
-void ofToQCImageDemoApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }

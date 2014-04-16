@@ -33,6 +33,9 @@ ofxQCBaseWindowProxy::ofxQCBaseWindowProxy()
 
 void ofxQCBaseWindowProxy::setupOpenGL(int w, int h, int screenMode)
 {
+	// Fuck you.
+	glewInit();
+
 	ofSetupGraphicDefaults();
 
 	windowMode = screenMode;

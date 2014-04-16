@@ -8,7 +8,6 @@
  */
 
 #import "ofImage.h"
-
 #import	<Quartz/Quartz.h>
 
 // ofxQCImageUtilities is a set of utility functions allowing you to
